@@ -1,0 +1,12 @@
+<h2><%= @world_leader.name %></h2>
+
+<p><strong>Country:</strong> <%= link_to @world_leader.country.name, country_path(@world_leader.country) %></p>
+<p><strong>In Office:</strong> <%= @world_leader.years_in_office %></p>
+<p><strong>Alive:</strong> <%= @world_leader.alive %></p>
+<p><strong>Quote:</strong> <%= @world_leader.quote %></p>
+
+<%= image_tag @world_leader.image, alt: @world_leader.name, class: 'leaderImage' %>
+<br />
+
+<%= link_to 'Edit this Leader', edit_world_leader_path %> |
+<%= link_to 'Delete this Leader', world_leader_path(@world_leader), method: 'delete' %>

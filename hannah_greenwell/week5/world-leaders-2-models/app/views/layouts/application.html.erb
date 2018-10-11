@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Countries! Countries! Countries!</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <h1>All the Countries of the World</h1>
+
+    <nav>
+      <% if @current_user.present? %>
+        Welcome, <%= link_to @current_user.name, user_path(@current_user) %> |
+        <%= link_to 'Logout', login_path, method: 'delete' %>
+      <% else %>
+        <%= link_to 'Login', login_path %> |
+        <%= link_to 'Sign Up', new_user_path %>
+      <% end %>
+    </nav>
+
+    <br>
+
+    <nav>
+      <%= link_to 'All Countries', countries_path %> |
+      <%= link_to 'Add New Country', new_country_path %> | 
+      <%= link_to 'All World Leaders', world_leaders_path %> |
+      <%= link_to 'Add New World Leader', new_world_leader_path %>
+
+    </nav>
+
+    <%= yield %>
+
+  </body>
+</html>

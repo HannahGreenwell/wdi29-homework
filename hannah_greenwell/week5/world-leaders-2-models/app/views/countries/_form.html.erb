@@ -1,0 +1,23 @@
+<%= form_for @country do |f| -%>
+  <fieldset>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :capital %>
+    <%= f.text_field :capital %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :area %>
+    <%= f.text_field :area %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :image, 'Image URL' %>
+    <%= f.text_field :image %>
+  </fieldset>
+
+  <%= f.submit %>
+<% end %>

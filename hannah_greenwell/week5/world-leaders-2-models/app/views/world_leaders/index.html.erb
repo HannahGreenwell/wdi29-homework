@@ -1,0 +1,9 @@
+<h2>All World Leaders</h2>
+
+<ul>
+  <% @world_leaders.each do |leader| %>
+    <li>
+      <%= link_to leader.name, world_leader_path(leader) %>
+    </li>
+  <% end %>
+</ul>

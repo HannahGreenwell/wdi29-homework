@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  years_in_office: MyText
+  alive: MyText
+  image: MyText
+  quote: MyText
+  country_id: 1
+
+two:
+  name: MyText
+  years_in_office: MyText
+  alive: MyText
+  image: MyText
+  quote: MyText
+  country_id: 1

@@ -1,0 +1,10 @@
+body {
+  font-family: helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.7em;
+  margin: 30px;
+}
+
+.userImage {
+  max-height: 50vh;
+}

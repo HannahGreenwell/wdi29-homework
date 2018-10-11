@@ -1,0 +1,29 @@
+<h2><%= @country.name %></h2>
+
+<h4>Leaders (Past & Present)</h4>
+<ul>
+  <% @country.world_leaders.each do |leader| %>
+    <li>
+      <%= link_to leader.name, world_leader_path(leader.id) %>
+    </li>
+  <% end %>
+</ul>
+
+<p><strong>Capital:</strong> <%= @country.capital %></p>
+<p><strong>Area:</strong> <%= @country.area %> km&sup2</p>
+<p><strong>Capital:</strong> <%= @country.capital %></p>
+
+<h4>Users from <%= @country.name %></h4>
+<ul>
+  <% @country.users.each do |user| %>
+    <li>
+      <%= user.name %>
+    </li>
+  <% end %>
+</ul>
+
+<%= image_tag @country.image, alt: @country.name, class: 'countryImage' %>
+<br />
+
+<%= link_to 'Edit this Country', edit_country_path %> |
+<%= link_to 'Delete this Country', country_path(@country), method: 'delete' %>

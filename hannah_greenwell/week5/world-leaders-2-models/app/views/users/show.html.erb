@@ -1,0 +1,13 @@
+<h2><%= @current_user.name %></h2>
+
+<p>Country: <%= link_to @current_user.country.name, country_path(@current_user.country_id)%></p>
+<p>Email: <%= @current_user.email %></p>
+
+<% if @current_user.image.present? %>
+  <%= image_tag @current_user.image, alt: @current_user.name, class: 'userImage' %>
+<% end %>
+
+<br>
+
+<%= link_to 'Edit Your Account', edit_user_path(@current_user) %> |
+<%= link_to 'Delete Your Account', user_path(@current_user), method: 'delete' %>
